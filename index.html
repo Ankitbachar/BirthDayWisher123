@@ -10,7 +10,7 @@
   <div class="container">
     <h1 id="title">🎂 Birthday Wisher 🎂</h1>
     <input type="text" id="name" placeholder="Enter your name" />
-    <input type="date" id="dob" placeholder="dd-mm-yyyy" />
+    <input type="date" id="dob" placeholder="dd-mm-yyyy" pattern="\d{2}-\d{2}-\d{4}" oninput="this.value=this.value.replace(/[^0-9-]/g,'')" />
     <button onclick="checkBirthday()">Submit</button>
     <div class="message" id="msg"></div>
   </div>
